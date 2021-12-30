@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal | 2</title>
+</head>
+
+<body>
+
+    <script>
+        //HTML FRAGMENT
+        // 1. 
+        /*
+ const mahasiswa = {
+    nama: 'Muhammad Furqon',
+    umur: 27,
+    stambuk: '0901212',
+    email: 'fareqon686@gmail.com'
+};
+
+const el = `<div class="mhs">
+<h2>${mahasiswa.nama}</h2>
+<span class="nrp">${mahasiswa.stambuk}</span>       
+</div>`;
+
+// Masukan ke dalam dom
+document.body.innerHTML = el;
+*/
+
+
+        // 2. Pakai Looping (MAP)
+
+        /*
+        const mhs =[
+            {
+            nama : "Muhamamad Furqon",
+            email : "fareqon686@gmail.com"
+        },
+            {
+            nama : "Cecep",
+            email : "fareqon686@gmail.com"
+        },
+            {
+            nama : "Jumzud",
+            email : "fareqon686@gmail.com"
+        }
+        ];
+
+        // Looping Pakai Map
+
+        const element = `<div class="mahasiswa">
+        ${mhs.map(m => `<ul>
+        <li>${m.nama}</li>
+        <li>${m.email}</li>
+        </ul>`).join('')}
+        </div>`;
+        document.body.innerHTML = element;
+        */
+
+
+        // 3. Conditionals
+        // Ternary
+        /*
+        const lagu = {
+            judul : "Majin",
+            penyanyi : 'Bang Konas',
+            feat : 'Ade Khusna'
+        }
+
+        const el2 = `<div class="lagu">
+        <ul>
+            <li>${lagu.judul}</li>
+            <li>${lagu.penyanyi} ${lagu.feat ? `(feat. ${lagu.feat})` : ``}</li>
+        </ul>
+        </div>`
+        document.body.innerHTML = el2;
+        */
+
+        //4. Nested
+        // HTML FRAGMENTS BERSARANG
+
+        const santri = {
+            nama: "Fitri Fauziah",
+            semester: 6,
+            mataKuliah: ['Rekayasa Web', 'Analsis dan Peranacangan Informasi', 'Shorof', 'Nahwu']
+        };
+
+
+        function cetakMataKuliah(mataKuliah) {
+            return `
+    <ol>
+    ${mataKuliah.map(mk => `<li>${mk}</li>`).join('')}
+    </ol>
+    `;
+        }
+
+        const el3 = `<div class="mhs">
+<h2>${santri.nama}</h2>
+<span class="semester">Semester ${santri.semester}</span>
+<h4>Mata Kuliah : </h4>
+${cetakMataKuliah (santri.mataKuliah)}
+</div>`;
+
+        document.body.innerHTML = el3;
+    </script>
+</body>
+
+</html>

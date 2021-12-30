@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+
+<body>
+
+    <script>
+        // Ini kode saya error 
+        // Masih bingung cara penggunaannya
+
+        /*
+        const coba = new Promise(resolve => {
+            setTimeout(() => {
+                resolve('Selesai')
+            }, 2000)
+        });
+        */
+        //console.log(coba);
+        //coba.then(() => console.log(coba));
+
+
+        function cobaPromise() {
+            return new Promise((resolve, reject) => {
+                const waktu = 3000;
+                if (waktu = 3000) {
+                    setTimeout(() => {
+                        resolve('Selesai')
+                    }, waktu)
+                } else {
+                    reject('Kelamaan');
+                }
+            });
+        }
+
+        const coba = cobaPromise();
+        //console.log(coba);
+        coba
+            //.then(() => console.log(coba))
+            //.catch(() => console.log(coba))
+            .then(coba => console.log(coba))
+            .catch(coba => console.log(coba))
+
+        /*
+        async function cobaAsyinc() {
+            const coba = await cobaPromise();
+            console.log(coba);
+        }
+        cobaAsyinc();
+        */
+    </script>
+</body>
+
+</html>

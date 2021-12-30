@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assyncronus Callback</title>
+</head>
+
+<body>
+    <script>
+        // 2. Ini Contoh yang Syncronus Callback
+
+        /*
+        const mhs = [{
+                'nama': "Muhammad Furqon",
+                "nrp": "42688",
+                "email": "fareqon686@gmail.com",
+                "jurusan": "Ekonomi Islam",
+                "idDosenWali": 1
+            },
+
+            {
+                'nama': "Alfriali Jumzud",
+                "nrp": "42690",
+                "email": "fareqon686@gmail.com",
+                "jurusan": "PAI",
+                "idDosenWali": 2
+            },
+
+            {
+                'nama': "Fitri Fauziah",
+                "nrp": "426100",
+                "email": "fareqon686@gmail.com",
+                "jurusan": "Ushuluddin",
+                "idDosenWali": 2
+            }
+        ]
+        console.log('mulai');
+        mhs.forEach(m => {
+            for (let i = 0; i < 10000000; i++) {
+                let date = new Date();
+            }
+            console.log(m.nama)
+        });
+        console.log('selesai');
+        */
+
+        //2. Contoh Assyncronus Callback
+        // Ajak pakai Vanila Javascript
+
+        function getDataMahasiswa(url, success, error) {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        success(xhr.response);
+                    } else if (xhr.status === 404) {
+                        error();
+                    }
+                }
+            }
+
+            xhr.open('get', url);
+            xhr.send();
+        }
+
+
+        console.log('mulai')
+        getDataMahasiswa('data/mahasiswa.json', (result) => {
+            //console.log(JSON.parse(result));
+            const mhs = JSON.parse(result);
+            mhs.forEach(m => console.log(m.nama));
+        }, () => {})
+        console.log('selesai')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function | MAP</title>
+  </head>
+  <body>
+    <script>
+      //Menghitung jumlah huruf
+      let mhs = ["Muhammad Furqon", "Fitri Fauziah", "Sayang"];
+      // Kalau pakai Function yang biasa
+      let jumlahHuruf = mhs.map(function (ismi) {
+        return ismi.length;
+      });
+      console.log(jumlahHuruf);
+
+      // Kalau pakai Arrow function
+      let jumlahHuruf2 = mhs.map((ismi) => ismi.length);
+      console.log(jumlahHuruf2);
+
+      // Kalau mau dipetakan sebagai objek
+      let jumlahHuruf3 = mhs.map((ismi) => ({ nama: ismi, jumlahHuruf3: ismi.length }));
+      console.log(jumlahHuruf3);
+      console.table(jumlahHuruf3);
+    </script>
+  </body>
+</html>

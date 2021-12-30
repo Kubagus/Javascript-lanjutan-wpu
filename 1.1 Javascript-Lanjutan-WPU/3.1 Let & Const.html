@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let dan Const</title>
+  </head>
+  <body>
+    <script>
+      //IIFE ATAU SIAF
+      //Cara ngakalinnya
+      (function () {
+        for (var i = 0; i < 10; i++) {
+          console.log(i);
+        }
+      })();
+      //console.log(i); //Gak bisa diakses
+
+      // Cara pakai let
+      // Let menganut block scope
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+      }
+
+      //Cara pakai const
+      // Gak bisa di isi ulang
+      const mhs = {
+        nama: "furqon",
+        umur: 32,
+      };
+      console.log(mhs.nama);
+    </script>
+  </body>
+</html>

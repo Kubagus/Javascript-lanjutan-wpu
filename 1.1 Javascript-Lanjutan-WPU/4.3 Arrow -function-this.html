@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function | THIS</title>
+  </head>
+  <body>
+    <script>
+      //Konsep this pada arrow function
+
+      //Constructur Function
+
+      const Mahasiswa = function () {
+        this.nama = "Sandika";
+        this.umur = 31;
+        this.sayHello = function () {
+          console.log(`Hai, Nama saya ${this.nama} umur saya adalah ${this.umur} tahun`);
+        };
+      };
+      //instatiasi Object
+
+      const sandika = new Mahasiswa();
+
+      //Constructur Function menjadi arrow function
+
+      const Mhs = function () {
+        this.nama = "Furqon";
+        this.umur = 27;
+        this.sayHello = () => {
+          console.log(`Hai, Nama saya ${this.nama} umur saya adalah ${this.umur} tahun`);
+        };
+      };
+      //instatiasi Object
+
+      const furqon = new Mhs();
+
+      // Object Literal
+      const mhs1 = {
+        nama: "Fitri Fauziah",
+        pacar: "Muhammad Furqon",
+        saySayang: () => {
+          //console.log(`Hai, Sayangku ${this.nama} aku ${this.pacar} adalah cintamu`);
+          console.log(this);
+        },
+      };
+
+      // Arrow Function Tambah Umur
+      const santri = function () {
+        this.nama = "Alfriali Jumzud";
+        this.umur = 32;
+        this.saySantri = function () {
+          console.log(`Kaifa Haluka, Nama saya ${this.nama} dan umur saya ${this.umur} tahun`);
+        };
+        setInterval(() => {
+          console.log(this.umur++);
+        }, 500);
+      };
+      santri();
+    </script>
+  </body>
+</html>

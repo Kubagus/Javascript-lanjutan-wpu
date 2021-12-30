@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Function -2 </title>
+</head>
+
+<body>
+    <script>
+        // Destructuring
+        /*
+        function kalkulasi(a, b) {
+            return [a + b, a - b, a * b];
+        }
+
+
+        const [tambah, kurang, kali, bagi = 'tidak ada'] = kalkulasi(2, 3); // Harus berurutan
+        console.log(tambah);
+        console.log(bagi);
+        */
+
+
+        // kalau mau berurutan return valuenya jangan pakai objek
+        
+        function kalkulasi(a, b) {
+            return {
+                tambah: a + b,
+                kurang: a - b,
+                kali: a * b,
+                bagi: a / b,
+            }
+        }
+
+        const {
+            bagi,
+            kali,
+            kurang,
+            tambah
+        } = kalkulasi(2, 3)
+
+        console.log(kurang)
+    </script>
+</body>
+
+</html>

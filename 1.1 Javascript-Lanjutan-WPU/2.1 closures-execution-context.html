@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures | Execution-context</title>
+  </head>
+  <body>
+    <script>
+      //2 Fase Execution Context 1. CREATION 2. EXECUTION
+      //2.1 EXECUTION CONTEXT , HOISTING & SCOPE
+      //var nama = "Muhammad Furqon"; // Kalau di atas baru kebaca
+      //console.log(nama);
+      //var nama = "Muhammad Furqon"; // Kalau dibawah console akan tampil undefined
+
+      //creation phase atau fase kreasi pada global kontek
+      // nama var = undefined
+      // nama function = fn()
+
+      //Konsep ini disebut dengan hoisting
+      //window = global object
+      //this = window
+
+      //EXECUTION PHASE
+
+      console.log(sayHello()); // Variable menjadi undefined
+      var nama = "Furqon";
+      var umur = 21;
+
+      //console.log(sayHello()); // gak masalah kalau functionnya di bawah console log
+      function sayHello() {
+        return `hallo saya ${nama} umur saya ${umur} tahun`;
+      }
+
+      //Function membuat local exexution context
+      // yang didalamnya terdapat creation dan execution phase
+      //window
+      //arguments
+      //Hoisting
+    </script>
+  </body>
+</html>

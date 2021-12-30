@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        //Promise
+        // Object yang merepresentasikan keberhasilan atau kegagalan sebuah event yang asynchronus di masa yang akan datang
+        // Janji (Terpenuhi/ Ingkar)
+        // States (fullfiled/ Rejected/ Pending)
+        // Calbaack (resolve /reject /finally)
+        // Aksi kalau janji terpenuhi (Then)
+        // Aksi kalau janji tidak terpenuhi (Catch)
+
+        // promise biasanya untuk request ke API
+
+        // Contoh 1 Sederhana
+        /*
+        let ditepati = false;
+        const janji1 = new Promise((resolve, reject) => {
+            if (ditepati) {
+                resolve('Jani telah ditepati');
+            } else {
+                reject('Panduto')
+            }
+        });
+
+        janji1
+            .then(response => console.log(`OK! : ${response}`))
+            .catch(response => console.log(`NOT OK! : ${response}`))
+        */
+
+        // Contoh 2
+        let ditepati2 = true;
+        const janji2 = new Promise((resolve, reject) => {
+            if (ditepati2) {
+                setTimeout(() => {
+                    resolve('Ditepati setelah beberapa waktu');
+                }, 2000);
+            } else {
+                setTimeout(() => {
+                    resolve('Tidak ditepati setelah beberapa waktu');
+                }, 2000);
+            }
+        });
+
+        console.log('Mulai')
+        //console.log(janji2.then(() => console.log(janji2))); // Untuk melihat Prosesnya
+        janji2
+            .finally(() => console.log('Selesai Menunggu'))
+            .then(response => console.log(`OK! : ${response}`))
+            .catch(response => console.log(`NOT OK! : ${response}`))
+        console.log('Selesai')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator-2</title>
+    <style>
+        body {
+            background-color: salmon;
+            text-align: center;
+        }
+
+        .names {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 80px;
+            color: white;
+
+        }
+
+        .names span {
+            display: inline-block;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .names span:hover {
+            color: black;
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Jumzud</li>
+        <li>Slamet</li>
+        <li>Kijok</li>
+    </ul>
+
+    <h1 class="names">Furqon</h1>
+
+    <script>
+        // Spread Operator
+
+        // Membuat animasi perhuruf
+        const nama = document.querySelector('.names');
+        const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('');
+        console.log(huruf);
+
+
+        nama.innerHTML = huruf;
+    </script>
+</body>
+
+</html>

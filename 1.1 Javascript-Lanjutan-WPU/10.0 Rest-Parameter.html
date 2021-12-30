@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest-Parameter</title>
+</head>
+
+<body>
+    <script>
+        // Rest Parameter
+
+        function myFunc(...myArg) {
+            return myArg;
+        }
+        console.log(myFunc(1, 2, 3, 4, 5));
+
+
+        // Merubah Array dari Object dari argumnets
+        function tesArgumen() {
+            return Array.from(arguments);
+        }
+        console.log(tesArgumen('Jumzud', 'Slamet', 'Kijok', 'Cecep'))
+
+        // Kalau pakai spread operator
+        function tesMobil() {
+            return [...arguments];
+        }
+        console.log(tesMobil('Avanza', 'Kuda', 'Innova', 'Xenia'))
+
+
+        // Menjumlahkan isi Array dalam function
+        // Pakai For ..of
+
+        function jumlahkan(...myArgue) {
+            let total = 0;
+            for (const a of myArgue) { // Pakai for off
+                total += a;
+            }
+            return total;
+        }
+        console.log(jumlahkan(1, 2, 3, 4, 5))
+
+        // Menjumlahkan isi Array dalam function
+        // Pakai Reduce
+        function jumlahkan2(...myArgue) {
+            return myArgue.reduce((a, b) => a + b);
+        }
+        console.log(jumlahkan2(1, 2, 3, 4, 5))
+
+
+        // Array Destructuring
+        const kelompok1 = ['Sadam', "Ali", "Endah", "Parama"];
+        const [ketua, wakil, ...anggota] = kelompok1;
+        console.log(ketua);
+        console.log(wakil);
+        console.log(anggota);
+
+        // Objek Destructuring
+        const team = {
+            pm: 'Furqon',
+            frontEnd1: 'Jumzud',
+            frontEnd2: 'Slamet',
+            backEnd: 'Dayat',
+            ux: 'Hendra',
+            devOps: 'Ferry'
+        }
+
+        const {
+            pm,
+            ...myTeam
+        } = team;
+        console.log(pm);
+        console.log(myTeam);
+
+
+        //Filtering
+        //String
+
+        function filterBy(type, ...value) {
+            return value.filter(v => typeof v === type);
+        }
+        console.log(filterBy('string', 1, 2, false, 10, true, 'Aji'))
+
+        //Filtering
+        //Number
+        function filterBy1(type, ...value) {
+            return value.filter(v => typeof v === type);
+        }
+        console.log(filterBy1('number', 1, 2, false, 10, true, 'Aji'))
+
+        //Filtering
+        //Bolean
+        function filterBy2(type, ...value) {
+            return value.filter(v => typeof v === type);
+        }
+        console.log(filterBy2('boolean', 1, 2, false, 10, true, 'Aji'))
+    </script>
+</body>
+
+</html>

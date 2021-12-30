@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+
+<body>
+
+    <script>
+        // Spread Operator
+        // Memecah Iterable menjadi single element
+
+        /*
+        const santri = ['Jumzud', 'Slamet', 'Dodi'];
+        console.log(santri); // Biasa
+        console.log(...santri); // Spread Operator
+        console.log(...santri[0]); // Spread Operator terindex
+        */
+
+
+        // Kapan memakai spread operator
+        // 1. Untuk menggabung dua array atau lebih
+        /*
+        const santri = ['Jumzud', 'Slamet', 'Dodi'];
+        const ustadz = ['Ade', 'Konas', 'Panca'];
+        const orang = [...santri, ...ustadz]; // Pakai spread
+        const orang1 = [...santri, 'Daffa', ...ustadz]; // Pakai spread dan menambah isi array
+        const orang2 = santri.concat(ustadz); // Pakai concat
+
+        console.log(orang);
+        console.log(orang1);
+        console.log(orang2);
+        */
+
+
+        //2. Mengcopy Array
+
+        // Cara lain tapi tidak benar2 mengcopy
+        /*
+        const santri = ['Jumzud', 'Slamet', 'Dodi'];
+        const santri1 = santri;
+        console.log(santri);
+        console.log(santri1);
+        */
+
+        // Cara yang benar
+
+        const santri = ['Jumzud', 'Slamet', 'Dodi'];
+        const santri1 = [...santri];
+        santri1[0] = 'Fajar';
+        console.log(santri);
+        console.log(santri1);
+
+
+
+        //Ambil Li dari bodi
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      //FUNCTION EXPRESSION
+      const tampilNama = function (nama) {
+        return `Halo ${nama}`;
+      };
+      console.log(tampilNama("Muhammad Furqon"));
+
+      // CARA MENGUBAHNYA MENJADI ARROW FUNCTION
+      // CODE UNTUK 1 PARAMETER PAKAI KURUNG
+      const tampilName = (nama) => {
+        return `Halo ${nama}`;
+      };
+      console.log(tampilName("Muhammad Jumzud"));
+
+      // CODE UNTUK 1 PARAMETER TANPA KURUNG
+      const tampilIsmi = (nama) => {
+        return `Halo ${nama}`;
+      };
+      console.log(tampilIsmi("Annisa Hanifari"));
+
+      // CODE UNTUK 1 PARAMETER YANG RINGKAS // IMPLICIT RETURN
+      const tampilIsmi2 = (nama) => `Halo ${nama}`;
+      console.log(tampilIsmi2("Muh Irzal"));
+
+      // CODE UNTUK 1 PARAMETER TANPA PARAMETER YANG RINGKAS
+      const tampilIsmi3 = () => `Apa Kabar`;
+      console.log(tampilIsmi3());
+
+      //CODE UNTUL LEBIH DARI 1 PARAMETER
+      const sayHallo = (nama, waktu) => {
+        return `Hai, ${nama}, Selamat ${waktu}`;
+      };
+      console.log(sayHallo("Fitri", "Malam"));
+    </script>
+  </body>
+</html>

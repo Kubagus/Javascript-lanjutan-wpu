@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For..Of</title>
+</head>
+
+<body>
+
+    <ul>
+        <li class="nama">Furqon</li>
+        <li class="nama">Fitri</li>
+        <li class="nama">Nabila</li>
+    </ul>
+    <script>
+        // 1. for..of
+        // A. Array (iterable)
+
+        // Kalau pakai for biasa
+        /*
+        const mhs = ["Jumzud", "Cecep", 'Erik'];
+        for (let i = 0; i < mhs.length; i++) {
+            console.log(mhs[i]);
+        }
+        */
+
+        // Kalau pakai for each (foreach khusus untuk array)
+        /*
+        const mhs = ["Jumzud", "Cecep", 'Erik'];
+        mhs.forEach(m => console.log(m));
+        */
+
+        // Kalau pakai for off
+        /*
+        const mhs = ["Jumzud", "Cecep", 'Erik'];
+        for (const m of mhs) {
+            console.log(m);
+        }
+        */
+
+        //B. String
+        /*
+        const nama = 'Furqon';
+        for (const n of nama) {
+            console.log(n);
+        }
+        */
+
+        // Pakai foreach yang ke index
+        /*
+        const mhs = ["Jumzud", "Cecep", 'Erik'];
+        mhs.forEach((m, i) => {
+            console.log(i);
+            console.log(m);
+            document.writeln(`<p>${m} adalah mahasiswa ke ${i + 1}</p>`)
+        });
+        */
+
+        // Kalau pakai for of gak bisa ke index
+        /*
+        const mhs = ["Jumzud", "Cecep", 'Erik'];
+        for (const m of mhs) {
+            console.log(m);
+        }
+        */
+
+        // Kalau pakai for of dan bisa ke index, maka tambahkan entries()
+        /*
+        const mhs = ["Jumzud", "Cecep", 'Erik'];
+        for (const [i, m] of mhs.entries()) {
+            console.log(m);
+            console.log(i);
+            document.writeln(`<p>${m} adalah mahasiswa ke ${i + 1}</p>`)
+        }
+        */
+
+        //C. Nodelist
+
+        /*
+        const liNama = document.querySelectorAll('.nama');
+        console.log(liNama);
+        */
+
+        // Pakai foreach nodelist
+        /*
+        const liNama = document.querySelectorAll('.nama');
+        liNama.forEach(t => console.log(t.innerHTML));
+        */
+
+        // Pakai forof di nodelist
+        /*
+        const liNama = document.querySelectorAll('.nama');
+        for (const n of liNama) {
+            console.log(n.innerHTML);
+        }
+        */
+
+        // D. Arguments
+
+        function jumlahAngka() {
+            let jumlah = 0;
+            for (const a of arguments) {
+                jumlah += a;
+            }
+            return jumlah;
+        }
+
+        console.log(jumlahAngka(1, 2, 3, 4, 5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+[
+    {
+    "nama": "Muhammad Furqon",
+    "nrp": "42688",
+    "email": "fareqon686@gmail.com",
+    "jurusan": "Ekonomi Islam",
+    "idDosenWali": 1
+},
+
+{
+    "nama": "Alfriali Jumzud",
+    "nrp": "42690",
+    "email": "fareqon686@gmail.com",
+    "jurusan": "PAI",
+    "idDosenWali": 2
+},
+
+{
+    "nama": "Fitri Fauziah",
+    "nrp": "426100",
+    "email": "fareqon686@gmail.com",
+    "jurusan": "Ushuluddin",
+    "idDosenWali": 2
+}
+]

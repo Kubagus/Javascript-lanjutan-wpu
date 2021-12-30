@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncronus Callback</title>
+</head>
+
+<body>
+    <script>
+        // Calback
+        // Syncronus Callback
+        //1. Function
+        /*
+        function halo(nama) {
+            alert(`Halo, ${nama}`)
+        }
+
+        function tampilkanPesan(callback) {
+            const nama = prompt('Masukan Nama : ')
+            callback(nama);
+        }
+        tampilkanPesan(halo)
+        */
+
+
+
+        //2. Anonymous Function
+        // Syncronus Callback
+
+
+        function tampilkanPesan2(callback2) {
+            const nama2 = prompt('Masukan Nama : ')
+            callback2(nama2);
+        }
+   
+        tampilkanPesan2(nama2 => alert(`Halo, nama anda alaha ${nama2}`))
+    </script>
+</body>
+
+</html>

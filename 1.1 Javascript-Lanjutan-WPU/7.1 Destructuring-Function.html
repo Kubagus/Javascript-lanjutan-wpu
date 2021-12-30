@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Function</title>
+</head>
+
+<body>
+    <script>
+        // Destructuring
+
+        function penjumlahanPerkalian(a, b) {
+            return [a + b, a * b];
+        }
+
+        /*
+        // Cara sebelumnya
+        const jumlah = penjumlahanPerkalian(2, 3)[0];
+        const kali = penjumlahanPerkalian(2, 3)[1];
+        console.log(jumlah);
+        console.log(kali);
+        */
+
+        // Caranya di bongkar dulu
+        const [jumlah, kali] = penjumlahanPerkalian(2, 3);
+        console.log(jumlah);
+        console.log(kali);
+    </script>
+</body>
+
+</html>

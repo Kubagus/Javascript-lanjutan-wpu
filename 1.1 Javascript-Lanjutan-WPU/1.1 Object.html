@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      // CARA MEMBUAT OBJECT
+      //1. Object Literal
+
+      /*
+      let mahasiswa = {
+        nama: "Muhammad Furqon",
+        energy: 10,
+        makan: function (porsi) {
+          this.energy = this.energy + porsi;
+          console.log(`halo ${this.nama}, Selamat Makan`);
+        },
+      };
+
+      let mahasiswa2 = {
+        nama: "Alfriali Jumzud",
+        energy: 20,
+        makan: function (porsi) {
+          this.energy = this.energy + porsi;
+          console.log(`halo ${this.nama}, Selamat Makan`);
+        },
+      };
+      */
+
+      //2. Object Function Declaration
+
+      /*
+      function Mahasiswa(nama, energi) {
+        let mahasiswa = {};
+        mahasiswa.nama = nama;
+        mahasiswa.energi = energi;
+
+        mahasiswa.makan = function (porsi) {
+          this.energi += porsi;
+          console.log(`Hallo ${this.nama}, Selamat Makan`);
+        };
+
+        mahasiswa.main = function (jam) {
+          this.energi -= jam;
+          console.log(`Hallo ${this.nama}, Selamat Main`);
+        };
+        return mahasiswa;
+      }
+
+      //Tinggal Instasiasi
+      let sandika = Mahasiswa("Furqon", 10);
+      let jumzud = Mahasiswa("Jumzud", 20);
+
+      */
+
+      //3. Objectt Constructor
+      //Menggunakan keyword NEW
+
+      function Mahasiswa(nama, energi) {
+        this.nama = nama;
+        this.energi = energi;
+
+        this.makan = function (porsi) {
+          this.energi += porsi;
+          console.log(`Hallo ${this.nama}, Selamat Makan`);
+        };
+
+        this.main = function (jam) {
+          this.energi -= jam;
+          console.log(`Hallo ${this.nama}, Selamat Main`);
+        };
+      }
+
+      let sandika = new Mahasiswa("Alfrili Jumzud", 30);
+    </script>
+  </body>
+</html>

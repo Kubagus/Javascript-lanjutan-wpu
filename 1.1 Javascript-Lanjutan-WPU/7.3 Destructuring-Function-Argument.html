@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Function-Arguments</title>
+</head>
+
+<body>
+    <script>
+        /*
+        const mhs1 = {
+            nama: 'Muhammad Furqon',
+            umur: 27,
+            email: 'fareqon686@gmail.com'
+        }
+
+        function cetakMhs(nama, umur) {
+            return `Halo, nama saya ${nama}, saya berumur ${umur} tahun`
+        };
+
+        console.log(cetakMhs(mhs1.nama, mhs1.umur));
+        */
+
+
+        // Kalau pakai destructuring
+        const mhs2 = {
+            nama: 'Muhammad Furqon',
+            umur: 27,
+            email: 'fareqon686@gmail.com',
+            nilai: {
+                tugas: 80,
+                uts: 85,
+                uas: 75
+            }
+        }
+
+        function cetakMhs({
+            nama,
+            umur,
+            nilai: {
+                tugas,
+                uts,
+                uas
+            }
+        }) {
+            return `Halo, nama saya ${nama}, saya berumur ${umur} tahun, dan nilai uas saya ${uts}`
+        };
+
+        console.log(cetakMhs(mhs2))
+    </script>
+</body>
+
+</html>

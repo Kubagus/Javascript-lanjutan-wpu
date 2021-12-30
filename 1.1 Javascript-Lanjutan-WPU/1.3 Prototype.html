@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+  </head>
+  <body>
+    <script>
+      //1. OBJECT DENGAN MENGGUNAKAN PROTOTIPLE INHERITANCE
+      //Prototype
+      // Pewarisan / Inheritance
+
+      function Mahasiswa(nama, energi) {
+        this.nama = nama;
+        this.energi = energi;
+      }
+
+      Mahasiswa.prototype.makan = function (porsi) {
+        this.energi += porsi;
+        return `Hallo ${this.nama}, Selamat Makan`;
+      };
+      Mahasiswa.prototype.main = function (jam) {
+        this.energi -= jam;
+        return `Hallo ${this.nama}, Selamat Bermain`;
+      };
+      Mahasiswa.prototype.tidur = function (jam) {
+        this.energi += jam * 2;
+        return `Hallo ${this.nama}, Selamat Istirahat`;
+      };
+      let sandika = new Mahasiswa("Furqon", 10);
+
+      //2. CARA MENGGUNAKANNYA DENGAN KELAS GIMANA
+      //Versi kelas
+      //Ini di belakang layar dikerjakan prototype
+      class Santri {
+        constructor(ismi, quwah) {
+          this.ismi = ismi;
+          this.quwah = quwah;
+        }
+        akel(adad) {
+          this.quwah += adad;
+          return `Hallo ${this.ismi}, Selamat Makan`;
+        }
+        laab(saah) {
+          this.quwah -= saah;
+          return `Hallo ${this.ismi}, Selamat Bermain`;
+        }
+        naum(saah) {
+          this.quwah += saah * 2;
+          return `Hallo ${this.ismi}, Selamat Istirahat`;
+        }
+      }
+
+      let slamet = new Santri("Slamet", 10);
+      let akmal = new Santri("Akmal", 20);
+
+      let angka = [1, 2, 3];
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLOSURES</title>
+  </head>
+  <body>
+    <script>
+      //LEXICAL SCOPE
+      //INNER FUNCTION
+      //CLOSURE
+      function init() {
+        // let nama = "Furqon";
+
+        return function (nama) {
+          console.log(nama);
+        };
+        return tampilNama;
+      }
+      let panggilNama = init();
+      panggilNama("Fitri");
+      panggilNama("Furqon");
+    </script>
+  </body>
+</html>

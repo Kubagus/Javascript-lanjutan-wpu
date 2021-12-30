@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal</title>
+</head>
+
+<body>
+
+    div
+    <script>
+        // Template Literal / Template String
+        const nama = `Muhammad Furqon`;
+        const umur = 31;
+        document.writeln(`<p>Hallo nama saya ${nama} umur saya ${umur}</p>`)
+
+
+        // Embeded Expression
+        document.writeln(`<p>${1+1}</p>`);
+        console.log(`${alert('Hallo')}`);
+
+
+        // Ternary Operation
+
+        const x = 11;
+        console.log(`${(x % 2 == 0) ?'genap' : 'ganjil'}`)
+
+
+        //HTML FRAGMENT
+        const mahasiswa = {
+            nama: 'Muhammad Furqon',
+            umur: 27,
+            stambuk: '0901212',
+            email: 'fareqon686@gmail.com'
+        };
+
+        const el = `<div class="mhs">
+        <h2>${mahasiswa.nama}</h2>
+        <span class="nrp">${mahasiswa.stambuk}</span>       
+        </div>`;
+
+        console.log(el);
+        document.writeln(el);
+    </script>
+</body>
+
+</html>
